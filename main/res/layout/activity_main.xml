@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" tools:layout_editor_absoluteY="68dp" tools:layout_editor_absoluteX="9dp">
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="205dp" android:id="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="423dp" android:id="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
+            android:layout_width="412dp"
+            android:layout_height="423dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="423dp"
+            android:id="@+id/linearLayout2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="303dp"
+                android:layout_height="132dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="220dp" android:id="@+id/constraintLayout"><![CDATA[
+
+
+                    android:onClick="startGeneration" />
+
+            ]]>
+            <Button
+                    android:text="Negative random gen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/positiveGenerationStart"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="215dp"
+                    android:layout_marginStart="215dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="84dp" android:onClick="startGeneration" android:textSize="10sp"
+                    app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.0"/>
+            <Button
+                    android:text="Positive random gen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/negativeGenerationStart"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="84dp"
+                    android:layout_marginEnd="215dp" android:layout_marginRight="215dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:onClick="startGeneration"
+                    android:textSize="10sp" app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="1.0"/>
+            <Button
+                    android:text="stop &amp; search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/negativeGenerationStop"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="84dp"
+                    android:layout_marginEnd="215dp" android:layout_marginRight="215dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:onClick="handleEndOfGeneration"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+                    android:textSize="10sp"/>
+            <Button
+                    android:text="stop &amp; search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/positiveGenerationStop"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="84dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="215dp"
+                    android:layout_marginStart="215dp" android:onClick="handleEndOfGeneration"
+                    app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.0"
+                    android:textSize="10sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+                android:layout_width="194dp"
+                android:layout_height="44dp" android:id="@+id/generationResult"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                android:clickable="false" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="18sp" android:gravity="center"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
